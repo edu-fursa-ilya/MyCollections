@@ -1,24 +1,22 @@
 package com.fursa.collections.lists;
 
-
 import java.util.Iterator;
 
 public class MyArrayIterator<E> implements Iterator<E> {
-
     private int index = 0;
-    E[] vals;
+    private E[] arr;
 
-    public MyArrayIterator(E[] vals) {
-        this.vals = vals;
+    public MyArrayIterator(E[] arr) {
+        this.arr = arr;
     }
 
     @Override
     public boolean hasNext() {
-        return index < vals.length;
+        return index < arr.length;
     }
 
     @Override
     public E next() {
-        return vals[index++];
+        return arr[index++];
     }
 }
